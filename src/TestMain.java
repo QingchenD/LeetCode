@@ -73,12 +73,55 @@ public class TestMain {
 //        System.out.println(i1 == i2);
 //        System.out.println(i3 == 200);
 
-        NumIslands nl = new NumIslands();
-        char[][] grid = {{'1', '1', '1', '1', '0'},
-                         {'1', '1', '0', '1', '0'},
-                         {'1', '1', '0', '0', '0'},
-                         {'0', '0', '0', '0', '0'}};
+//        NumIslands nl = new NumIslands();
+//        char[][] grid = {{'1', '1', '1', '1', '0'},
+//                         {'1', '1', '0', '1', '0'},
+//                         {'1', '1', '0', '0', '0'},
+//                         {'0', '0', '0', '0', '0'}};
+//
+//        System.out.println(nl.numIslands(grid));
 
-        System.out.println(nl.numIslands(grid));
+        DuplicateZeros dz = new DuplicateZeros();
+        int[] numbs = {1,0,2,3,0,4,5,0};
+        dz.duplicateZeros(numbs);
+        for (int i : numbs) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println("\n******* ");
+        int[] numbs2 = {1,0,2,3};
+        dz.duplicateZeros(numbs2);
+        for (int i : numbs2) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println("\n******* ");
+        int[] numbs3 = {1,2,3,0};
+        dz.duplicateZeros(numbs3);
+        for (int i : numbs3) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println("\n******* ");
+        int[] numbs4 = {1,2,0,3};
+        dz.duplicateZeros(numbs4);
+        for (int i : numbs4) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println("\n******* ");
+        int[] numbs5 = {0,0,0,0,0,0,0};
+        dz.duplicateZeros(numbs5);
+        for (int i : numbs5) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println("\n******* ");
+        int[] numbs6 =  {8,4,5,0,0,0,0,7};
+        dz.duplicateZeros(numbs6);
+        for (int i : numbs6) {
+            System.out.print(i + " ");
+        }
+
     }
 }
