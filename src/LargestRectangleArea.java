@@ -20,37 +20,16 @@ public class LargestRectangleArea {
     public int largestRectangleArea(int[] heights) {
         if (heights == null || heights.length == 0) return 0;
 
+        Stack < Integer > stack = new Stack < > ();
+        stack.push(-1);
         long largestArea = 0;
-        Stack<Integer> stack = new Stack<>();
-        int index = 0;
-        for (int i = 0; i < heights.length; i++) {
-            if (stack.size() == 0) stack.push(i);
-            else {
-                index = stack.peek();
-                if (heights[i] >= heights[index]) stack.push(i);
-                else {
-                    while (stack.size() > 0 && heights[stack.peek()] > heights[i]) {
-                        index = stack.pop();
-                        largestArea = Math.max((long)(i - index) * heights[index], largestArea);
-                    }
-
-                    stack.push(i);
-                }
-            }
+        for (int i = 0; i < heights.length; ++i) {
+            while (stack.peek() != -1 && heights[stack.peek()] >= heights[i])
+                largestArea = Math.max(largestArea, heights[stack.pop()] * (i - stack.peek() - 1));
+            stack.push(i);
         }
-
-        if (stack.size() > 0) {
-            int last = stack.peek();
-            while (stack.size() > 1) {
-                index = stack.pop();
-                largestArea = Math.max((last + 1 - index) * heights[index], largestArea);
-            }
-
-            //最小的height
-            largestArea = Math.max(heights.length * (long)heights[stack.peek()], largestArea);
-        }
-
-
+        while (stack.peek() != -1)
+            largestArea = Math.max(largestArea, heights[stack.pop()] * (heights.length - stack.peek() -1));
         return (int)largestArea;
     }
 
