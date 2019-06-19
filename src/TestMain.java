@@ -210,20 +210,24 @@ public class TestMain {
 //                {4,2,1}};
 //        System.out.println(mps.minPathSum(grid));
 
-        WordBreak wb = new WordBreak();
+//        WordBreak wb = new WordBreak();
 //        String s = "leetcode";
 //        List<String> words = new ArrayList<>();
 //        words.add("leet");
 //        words.add("code"); //, "code"]
 //        System.out.println(wb.wordBreak(s, words));
 
-        String s = "catsandog";
-        List<String> words = new ArrayList<>();
-        words.add("cats");
-        words.add("dog");
-        words.add("sand");
-        words.add("and");
-        words.add("cat");
-        System.out.println(wb.wordBreak(s, words));
+//        String s = "catsandog";
+//        List<String> words = new ArrayList<>();
+//        words.add("cats");
+//        words.add("dog");
+//        words.add("sand");
+//        words.add("and");
+//        words.add("cat");
+//        System.out.println(wb.wordBreak(s, words));
+
+        MissingNumber mn = new MissingNumber();
+        int[] nums = {9,6,4,2,3,5,7,0,1};
+        System.out.println(mn.missingNumber(nums));
     }
 }
