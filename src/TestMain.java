@@ -226,8 +226,86 @@ public class TestMain {
 //        words.add("cat");
 //        System.out.println(wb.wordBreak(s, words));
 
-        MissingNumber mn = new MissingNumber();
-        int[] nums = {9,6,4,2,3,5,7,0,1};
-        System.out.println(mn.missingNumber(nums));
+//        MissingNumber mn = new MissingNumber();
+//        int[] nums = {9,6,4,2,3,5,7,0,1};
+//        System.out.println(mn.missingNumber(nums));
+
+       /* Rob rob = new Rob();
+        int[] numbs = {1,2,3,1};
+        System.out.println(rob.rob(numbs));
+
+        int[] numbs2 = {2,7,9,3,1};
+        System.out.println(rob.rob(numbs2));*/
+//
+//       PalindromeList pdl = new PalindromeList();
+//       ListNode node1 = new ListNode(1);
+//       ListNode node2 = new ListNode(2);
+//       node1.next = node2;
+//       System.out.println(pdl.isPalindrome(node1));
+//
+//        ListNode n1 = new ListNode(1);
+//        ListNode n2 = new ListNode(2);
+//        ListNode n3 = new ListNode(2);
+//        ListNode n4 = new ListNode(1);
+//        n1.next = n2;
+//        n2.next = n3;
+//        n3.next = n4;
+//        System.out.println(pdl.isPalindrome(n1));
+
+//        TopKFrequent tf = new TopKFrequent();
+//        int[] numbs = {1,1,1,2,2,3};
+//        int k = 2;
+//        List<Integer> rst = tf.topKFrequent(numbs, 2);
+//        for (Integer i : rst) {
+//            System.out.print(i + " ");
+//        }
+
+//        FindTargetSumWays fts = new FindTargetSumWays();
+//        int[] nums = {1, 1, 1, 1, 1};
+//        System.out.println(fts.findTargetSumWays(nums, 3));
+
+//        FindUnsortedSubarray fus = new FindUnsortedSubarray();
+//        int[] nums =  {2, 6, 4, 8, 10, 9, 15};
+//        System.out.println(fus.findUnsortedSubarray(nums));
+
+//        int[] nums2 =  {2, 1};
+//        System.out.println(fus.findUnsortedSubarray(nums2));
+//
+//        int[] nums3 =  {5, 4, 3, 2, 1};
+//        System.out.println(fus.findUnsortedSubarray(nums3));
+//
+//        int[] nums4 =  {1, 2, 3, 3, 3};
+//        System.out.println(fus.findUnsortedSubarray(nums4));
+
+//        DiameterOfBinaryTree dbt = new DiameterOfBinaryTree();
+//        TreeNode n1 = new TreeNode(1);
+//        TreeNode n2 = new TreeNode(2);
+//        TreeNode n3 = new TreeNode(3);
+//        TreeNode n4 = new TreeNode(4);
+//        TreeNode n5 = new TreeNode(5);
+//        n1.left = n2; n1.right = n3;
+//        n2.left = n4; n2.right = n5;
+//
+//        System.out.println(dbt.diameterOfBinaryTree(n1));
+
+        MergeTrees mt = new MergeTrees();
+        TreeNode t1 = new TreeNode(1);
+        TreeNode t2 = new TreeNode(3);
+        TreeNode t3 = new TreeNode(2);
+        TreeNode t4 = new TreeNode(5);
+        t1.left = t2; t1.right = t3;
+        t2.left = t4;
+
+        TreeNode n1 = new TreeNode(2);
+        TreeNode n2 = new TreeNode(1);
+        TreeNode n3 = new TreeNode(3);
+        TreeNode n4 = new TreeNode(4);
+        TreeNode n5 = new TreeNode(7);
+        n1.left = n2; n1.right = n3;
+        n2.right = n4;
+        n3.right = n5;
+
+        TreeNode rst = mt.mergeTrees(t1, n1);
+        System.out.println(" rst.val:" + rst.val);
     }
 }
