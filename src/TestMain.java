@@ -288,24 +288,37 @@ public class TestMain {
 //
 //        System.out.println(dbt.diameterOfBinaryTree(n1));
 
-        MergeTrees mt = new MergeTrees();
-        TreeNode t1 = new TreeNode(1);
-        TreeNode t2 = new TreeNode(3);
-        TreeNode t3 = new TreeNode(2);
-        TreeNode t4 = new TreeNode(5);
-        t1.left = t2; t1.right = t3;
-        t2.left = t4;
+//        MergeTrees mt = new MergeTrees();
+//        TreeNode t1 = new TreeNode(1);
+//        TreeNode t2 = new TreeNode(3);
+//        TreeNode t3 = new TreeNode(2);
+//        TreeNode t4 = new TreeNode(5);
+//        t1.left = t2; t1.right = t3;
+//        t2.left = t4;
+//
+//        TreeNode n1 = new TreeNode(2);
+//        TreeNode n2 = new TreeNode(1);
+//        TreeNode n3 = new TreeNode(3);
+//        TreeNode n4 = new TreeNode(4);
+//        TreeNode n5 = new TreeNode(7);
+//        n1.left = n2; n1.right = n3;
+//        n2.right = n4;
+//        n3.right = n5;
+//
+//        TreeNode rst = mt.mergeTrees(t1, n1);
+//        System.out.println(" rst.val:" + rst.val);
 
-        TreeNode n1 = new TreeNode(2);
-        TreeNode n2 = new TreeNode(1);
-        TreeNode n3 = new TreeNode(3);
-        TreeNode n4 = new TreeNode(4);
-        TreeNode n5 = new TreeNode(7);
-        n1.left = n2; n1.right = n3;
-        n2.right = n4;
-        n3.right = n5;
+//        FindDisappearedNumbers fdn = new FindDisappearedNumbers();
+//        int[] nums = {4,3,2,7,8,2,3,1};
+//        List<Integer> rst = fdn.findDisappearedNumbers(nums);
+//        for (Integer i : rst) {
+//            System.out.print(i + " ");
+//        }
 
-        TreeNode rst = mt.mergeTrees(t1, n1);
-        System.out.println(" rst.val:" + rst.val);
+        CountBits cb = new CountBits();
+        int[] rst = cb.countBits(5);
+        for (int i : rst) {
+            System.out.print(i + " ");
+        }
     }
 }
