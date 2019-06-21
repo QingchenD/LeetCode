@@ -26,13 +26,21 @@
 public class SetZeroes {
 
     /**
+     * 使用两个变量，记录第一个为0的行号和列号，后面所有的0值，都可以映射到 记录的行和列。
+     * 空间复杂度减少的常数级别。
      * 时间复杂度:o(mn)
      * 空间复杂度:O(1)
      *
      * 执行用时 :3 ms, 在所有 Java 提交中击败了83.71%的用户
-     * 内存消耗 :52.2 MB, 在所有 Java 提交中击败了51.68%的用户
+     * 内存消耗 :56.7 MB, 在所有 Java 提交中击败了12.05%的用户
      *
      * 按理说空间复杂度降低，占用的空间会变少，但是这里却增加了，？？？？
+     * 难道是代码的空间？？？？
+     *
+     * 注：
+     *   还有一个，有趣的做法，就是如果矩阵中的值是由范围的， 可以在扫描是，把为0的那行和列的数（非0数）设置为一个范围外的特殊值。
+     *   扫描结束后，再把特殊值，设置为0.理论上不需要额外的空间。
+     *
      */
     public void setZeroes(int[][] matrix) {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) return;
@@ -59,18 +67,10 @@ public class SetZeroes {
 
         if (r == -1) return;
 
-        for (int[] ints : matrix) {
-            for (int i : ints) {
-                System.out.print(i + " ");
-            }
-            System.out.println();
-        }
-        System.out.println();
-
         //设置行为0
         for (int i = 0; i < row; i++) {
             if (matrix[i][c] == 0) {
-                if (i != c) {
+                if (i != r) {
                     for (int j = 0; j < col; j++) {
                         matrix[i][j] = 0;
                     }

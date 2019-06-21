@@ -1,3 +1,6 @@
+import jdk.internal.org.objectweb.asm.tree.FieldInsnNode;
+import sun.reflect.generics.tree.Tree;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -320,7 +323,7 @@ public class TestMain {
 //        for (int i : rst) {
 //            System.out.print(i + " ");
 //        }
-        SearchMatrix sm = new SearchMatrix();
+//        SearchMatrix sm = new SearchMatrix();
 //        int[][] matrix = {  {1, 2, 3, 4, 5},
 //                            {6, 7, 8, 9, 10},
 //                            {11,12,13,14,15},
@@ -402,18 +405,68 @@ public class TestMain {
 //            System.out.println();
 //        }
 
-        matrix = new int[][] {
-                {0,1,2,0},
-                {3,4,5,2},
-                {1,0,1,5}
-        };
-        sz.setZeroes(matrix);
+//        matrix = new int[][] {
+//                {0,1,2,0},
+//                {3,4,5,2},
+//                {1,0,1,5}
+//        };
+//        sz.setZeroes(matrix);
+//
+//        for (int[] ints : matrix) {
+//            for (int i : ints) {
+//                System.out.print(i + " ");
+//            }
+//            System.out.println();
+//        }
 
-        for (int[] ints : matrix) {
-            for (int i : ints) {
-                System.out.print(i + " ");
-            }
-            System.out.println();
-        }
+//        matrix = new int[][] {
+//                {1,1,1},
+//                {0,1,2}
+//        };
+//
+//        sz.setZeroes(matrix);
+//
+//        for (int[] ints : matrix) {
+//            for (int i : ints) {
+//                System.out.print(i + " ");
+//            }
+//            System.out.println();
+//        }
+
+//        Flatten flatten = new Flatten();
+//        TreeNode n1 = new TreeNode(1);
+//        TreeNode n2 = new TreeNode(2);
+//        TreeNode n3 = new TreeNode(5);
+//        TreeNode n4 = new TreeNode(3);
+//        TreeNode n5 = new TreeNode(4);
+//        TreeNode n6 = new TreeNode(6);
+//        n1.left = n2; n1.right = n3;
+//        n2.left = n4; n2.right = n5;
+//        n3.right = n6;
+//
+//        flatten.flatten(n1);
+//        TreeNode n = n1;
+//        while (n != null) {
+//            System.out.print(n.val + " " + " left is null:" + (n.left == null) + " | ");
+//            n = n.right;
+//        }
+
+//        FindPeakElement fpe = new FindPeakElement();
+//        int[] nums = new int[] {1,2,3,1};
+//        System.out.println(fpe.findPeakElement(nums));
+//
+//        nums = new int[] {1,2,1,3,5,6,4};
+//        System.out.println(fpe.findPeakElement(nums));
+
+        FractionToDecimal ftd = new FractionToDecimal();
+//        System.out.println(ftd.fractionToDecimal(1, 2));
+//        System.out.println(ftd.fractionToDecimal(2, 1));
+//        System.out.println(ftd.fractionToDecimal(2, 3));
+//        System.out.println(ftd.fractionToDecimal(1, 6));
+//        System.out.println(ftd.fractionToDecimal(1, 7));
+//        System.out.println(ftd.fractionToDecimal(1, 11));
+//        System.out.println(ftd.fractionToDecimal(1, 17));
+//        System.out.println(ftd.fractionToDecimal(-50, 8));
+        System.out.println(ftd.fractionToDecimal(-1, -2147483648));
     }
 }
