@@ -1,5 +1,6 @@
 import jdk.internal.org.objectweb.asm.tree.FieldInsnNode;
 import sun.reflect.generics.tree.Tree;
+import sun.security.provider.Sun;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -376,12 +377,12 @@ public class TestMain {
 //        System.out.println(cs.countSubstrings("abc"));
 //        System.out.println(cs.countSubstrings("aaa"));
 
-        SetZeroes sz = new SetZeroes();
-        int[][] matrix = new int[][] {
-            {1,1,1},
-            {1,0,1},
-            {1,1,1}
-        };
+//        SetZeroes sz = new SetZeroes();
+//        int[][] matrix = new int[][] {
+//            {1,1,1},
+//            {1,0,1},
+//            {1,1,1}
+//        };
 //        sz.setZeroes(matrix);
 //
 //        for (int[] ints : matrix) {
@@ -458,7 +459,7 @@ public class TestMain {
 //        nums = new int[] {1,2,1,3,5,6,4};
 //        System.out.println(fpe.findPeakElement(nums));
 
-        FractionToDecimal ftd = new FractionToDecimal();
+//        FractionToDecimal ftd = new FractionToDecimal();
 //        System.out.println(ftd.fractionToDecimal(1, 2));
 //        System.out.println(ftd.fractionToDecimal(2, 1));
 //        System.out.println(ftd.fractionToDecimal(2, 3));
@@ -467,6 +468,43 @@ public class TestMain {
 //        System.out.println(ftd.fractionToDecimal(1, 11));
 //        System.out.println(ftd.fractionToDecimal(1, 17));
 //        System.out.println(ftd.fractionToDecimal(-50, 8));
-        System.out.println(ftd.fractionToDecimal(-1, -2147483648));
+//        System.out.println(ftd.fractionToDecimal(-1, -2147483648));
+
+//        GetSum gs = new GetSum();
+//        System.out.println(gs.getSum(1,2));
+//        System.out.println(gs.getSum(-2,3));
+
+//        ShortestPathBinaryMatrix spbm = new ShortestPathBinaryMatrix();
+//        int[][] matrix = new int[][] {{0,0,0},{1,1,0},{1,1,0}};
+//        System.out.println(spbm.shortestPathBinaryMatrix(matrix));
+//
+//        matrix = new int[][] {{0,0,1,0},{1,0,1,0},{1,1,0,1},{0,0,0,0}};
+//        System.out.println(spbm.shortestPathBinaryMatrix(matrix));
+//
+//        matrix = new int[][]{{0,0,0,0,1},{1,0,0,0,0},{0,1,0,1,0},{0,0,0,1,1},{0,0,0,1,0}};
+//        System.out.println(spbm.shortestPathBinaryMatrix(matrix));
+
+//        SumOfDigits sd = new SumOfDigits();
+//        int[] nums = {34,23,1,24,75,33,54,8};
+//        System.out.println(sd.sumOfDigits(nums));
+//
+//        int[] nums1 = {99,77,33,66,55};
+//        System.out.println(sd.sumOfDigits(nums1));
+
+//        HighFive hf = new HighFive();
+//        int[][] items = {{1,91},{1,92},{2,93},{2,97},{1,60},{2,77},{1,65},{1,87},{1,100},{2,100},{2,76}};
+//        int[][] rst = hf.highFive(items);
+//        for (int[] score : rst) {
+//            System.out.println("[" + score[0] + "," + score[1] + "]");
+//        }
+
+        ConfusingNumberII cn = new ConfusingNumberII();
+        System.out.println(cn.confusingNumberII(20));
+        System.out.println(cn.confusingNumberII(100));
+        long startMs = System.currentTimeMillis();
+        System.out.println(cn.confusingNumberII(1000000000));
+        long endMs = System.currentTimeMillis();
+        System.out.println(1000000000 + " need ms:" + (endMs - startMs));
+
     }
 }
