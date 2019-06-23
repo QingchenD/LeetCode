@@ -44,7 +44,7 @@ public class ConfusingNumberII {
      * 技巧：
      *   如果Num为0，不再加0,原来做法会继续用0加，导致生成的数字，不是升序的，
      *   会出现重复的数字，所以用来了set来存储结果。
-     *   
+     *
      * leetcode: 228ms
      */
     private int count = 0;

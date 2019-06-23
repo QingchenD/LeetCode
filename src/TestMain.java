@@ -498,13 +498,52 @@ public class TestMain {
 //            System.out.println("[" + score[0] + "," + score[1] + "]");
 //        }
 
-        ConfusingNumberII cn = new ConfusingNumberII();
-        System.out.println(cn.confusingNumberII(20));
-        System.out.println(cn.confusingNumberII(100));
-        long startMs = System.currentTimeMillis();
-        System.out.println(cn.confusingNumberII(1000000000));
+//        ConfusingNumberII cn = new ConfusingNumberII();
+//        System.out.println(cn.confusingNumberII(20));
+//        System.out.println(cn.confusingNumberII(100));
+//        long startMs = System.currentTimeMillis();
+//        System.out.println(cn.confusingNumberII(1000000000));
+//        long endMs = System.currentTimeMillis();
+//        System.out.println(1000000000 + " need ms:" + (endMs - startMs));
+
+//        MedianFinder obj = new MedianFinder();
+//        obj.addNum(2);
+//        System.out.println(obj.findMedian());
+//        obj.addNum(5);
+//        System.out.println(obj.findMedian());
+//        obj.addNum(3);
+//        System.out.println(obj.findMedian());
+//        obj.addNum(1);
+//        System.out.println(obj.findMedian());
+//        obj.addNum(9);
+//        System.out.println(obj.findMedian());
+//        obj.addNum(0);
+//        System.out.println(obj.findMedian());
+//        obj.addNum(4);
+//        System.out.println(obj.findMedian());
+
+        CoinChange cc = new CoinChange();
+        int[] coins = {1, 2, 5};
+        int amount = 11;
+//        System.out.println(cc.coinChange(coins, amount));
+
+//        coins = new int[]{2};
+//        System.out.println(cc.coinChange(coins, 3));
+
+//        coins = new int[] {1,2147483647};
+//        System.out.println(cc.coinChange(coins, 2));
+
+        coins = new int[] {1};
+        System.out.println(cc.coinChange(coins, 0));
+
+//        coins = new int[]{1,2147483647};
+//        System.out.println(cc.coinChange(coins, 2));
+
+        long statMs = System.currentTimeMillis();
+        coins = new int[]   {186,419,83,408}; //{1,2, 5}; //
+        System.out.println(cc.coinChange(coins, 6249)); //100));
         long endMs = System.currentTimeMillis();
-        System.out.println(1000000000 + " need ms:" + (endMs - startMs));
+        System.out.println(" use ms: " + (endMs - statMs));
 
     }
 }
