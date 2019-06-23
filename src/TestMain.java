@@ -545,28 +545,51 @@ public class TestMain {
 //        long endMs = System.currentTimeMillis();
 //        System.out.println(" use ms: " + (endMs - statMs));
 
-        FindOcurrences fo = new FindOcurrences();
-        String text = "alice is a good girl she is a good student", first = "a", second = "good";
-        String[] rst = fo.findOcurrences(text,first, second);
-        for (String s : rst) {
-            System.out.print(s + " ");
+//        FindOcurrences fo = new FindOcurrences();
+//        String text = "alice is a good girl she is a good student", first = "a", second = "good";
+//        String[] rst = fo.findOcurrences(text,first, second);
+//        for (String s : rst) {
+//            System.out.print(s + " ");
+//        }
+//        System.out.println();
+//
+//        String text1 = "we will  we will   rock you", first1 = "we", second1 = "will";
+//        rst = fo.findOcurrences(text1, first1, second1);
+//        for (String s : rst) {
+//            System.out.print(s + " ");
+//        }
+//        System.out.println();
+//
+//        String text2 ="jkypmsxd jkypmsxd kcyxdfnoa jkypmsxd kcyxdfnoa jkypmsxd kcyxdfnoa kcyxdfnoa jkypmsxd kcyxdfnoa";
+//        String first2 = "kcyxdfnoa";
+//        String second2 = "jkypmsxd";
+//        rst = fo.findOcurrences(text2, first2, second2);
+//        for (String s : rst) {
+//            System.out.print(s + " ");
+//    }
+
+//        ReverseBits rb = new ReverseBits();
+//        System.out.println(rb.reverseBits(-3)) ;//(int)4294967293L));
+
+        RotateArray rotateArray = new RotateArray();
+        int[] array = {1,2,3,4,5,6,7};
+//        rotateArray.rotate(array, 3);
+//        for (int i : array) {
+//            System.out.print(i + " ");
+//        }
+//        System.out.println();
+
+        array = new int[]{-1,-100,3,99};
+        rotateArray.rotate(array, 2);
+        for (int i : array) {
+            System.out.print(i + " ");
         }
         System.out.println();
 
-        String text1 = "we will  we will   rock you", first1 = "we", second1 = "will";
-        rst = fo.findOcurrences(text1, first1, second1);
-        for (String s : rst) {
-            System.out.print(s + " ");
+        array = new int[]{-1};
+        rotateArray.rotate(array, 2);
+        for (int i : array) {
+            System.out.print(i + " ");
         }
-        System.out.println();
-
-        String text2 ="jkypmsxd jkypmsxd kcyxdfnoa jkypmsxd kcyxdfnoa jkypmsxd kcyxdfnoa kcyxdfnoa jkypmsxd kcyxdfnoa";
-        String first2 = "kcyxdfnoa";
-        String second2 = "jkypmsxd";
-        rst = fo.findOcurrences(text2, first2, second2);
-        for (String s : rst) {
-            System.out.print(s + " ");
-        }
-
     }
 }
