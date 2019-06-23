@@ -522,9 +522,9 @@ public class TestMain {
 //        obj.addNum(4);
 //        System.out.println(obj.findMedian());
 
-        CoinChange cc = new CoinChange();
-        int[] coins = {1, 2, 5};
-        int amount = 11;
+//        CoinChange cc = new CoinChange();
+//        int[] coins = {1, 2, 5};
+//        int amount = 11;
 //        System.out.println(cc.coinChange(coins, amount));
 
 //        coins = new int[]{2};
@@ -533,17 +533,40 @@ public class TestMain {
 //        coins = new int[] {1,2147483647};
 //        System.out.println(cc.coinChange(coins, 2));
 
-        coins = new int[] {1};
-        System.out.println(cc.coinChange(coins, 0));
+//        coins = new int[] {1};
+//        System.out.println(cc.coinChange(coins, 0));
 
 //        coins = new int[]{1,2147483647};
 //        System.out.println(cc.coinChange(coins, 2));
 
-        long statMs = System.currentTimeMillis();
-        coins = new int[]   {186,419,83,408}; //{1,2, 5}; //
-        System.out.println(cc.coinChange(coins, 6249)); //100));
-        long endMs = System.currentTimeMillis();
-        System.out.println(" use ms: " + (endMs - statMs));
+//        long statMs = System.currentTimeMillis();
+//        coins = new int[]   {186,419,83,408}; //{1,2, 5}; //
+//        System.out.println(cc.coinChange(coins, 6249)); //100));
+//        long endMs = System.currentTimeMillis();
+//        System.out.println(" use ms: " + (endMs - statMs));
+
+        FindOcurrences fo = new FindOcurrences();
+        String text = "alice is a good girl she is a good student", first = "a", second = "good";
+        String[] rst = fo.findOcurrences(text,first, second);
+        for (String s : rst) {
+            System.out.print(s + " ");
+        }
+        System.out.println();
+
+        String text1 = "we will  we will   rock you", first1 = "we", second1 = "will";
+        rst = fo.findOcurrences(text1, first1, second1);
+        for (String s : rst) {
+            System.out.print(s + " ");
+        }
+        System.out.println();
+
+        String text2 ="jkypmsxd jkypmsxd kcyxdfnoa jkypmsxd kcyxdfnoa jkypmsxd kcyxdfnoa kcyxdfnoa jkypmsxd kcyxdfnoa";
+        String first2 = "kcyxdfnoa";
+        String second2 = "jkypmsxd";
+        rst = fo.findOcurrences(text2, first2, second2);
+        for (String s : rst) {
+            System.out.print(s + " ");
+        }
 
     }
 }
