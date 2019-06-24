@@ -571,25 +571,41 @@ public class TestMain {
 //        ReverseBits rb = new ReverseBits();
 //        System.out.println(rb.reverseBits(-3)) ;//(int)4294967293L));
 
-        RotateArray rotateArray = new RotateArray();
-        int[] array = {1,2,3,4,5,6,7};
+//        RotateArray rotateArray = new RotateArray();
+//        int[] array = {1,2,3,4,5,6,7};
 //        rotateArray.rotate(array, 3);
 //        for (int i : array) {
 //            System.out.print(i + " ");
 //        }
 //        System.out.println();
 
-        array = new int[]{-1,-100,3,99};
-        rotateArray.rotate(array, 2);
-        for (int i : array) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+//        array = new int[]{-1,-100,3,99};
+//        rotateArray.rotate(array, 2);
+//        for (int i : array) {
+//            System.out.print(i + " ");
+//        }
+//        System.out.println();
+//
+//        array = new int[]{-1};
+//        rotateArray.rotate(array, 2);
+//        for (int i : array) {
+//            System.out.print(i + " ");
+//        }
+//        NumDecodings nd = new NumDecodings();
+//        System.out.println(nd.numDecodings("12"));
+//        System.out.println(nd.numDecodings("226"));
+//        System.out.println(nd.numDecodings("1122323432562"));
+//        System.out.println(nd.numDecodings("0"));
+//        System.out.println(nd.numDecodings("10"));
+//        System.out.println(nd.numDecodings("101"));
 
-        array = new int[]{-1};
-        rotateArray.rotate(array, 2);
-        for (int i : array) {
-            System.out.print(i + " ");
-        }
+        Trie trie = new Trie();
+        trie.insert("apple");
+        System.out.println(trie.search("apple"));   // 返回 true
+        System.out.println(trie.search("app"));     // 返回 false
+        System.out.println(trie.startsWith("app")); // 返回 true
+        trie.insert("app");
+        System.out.println(trie.search("app"));     // 返回 true
+
     }
 }
