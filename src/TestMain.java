@@ -672,11 +672,16 @@ public class TestMain {
 //            rst = rst.next;
 //        }
 
-        IncreasingTriplet it = new IncreasingTriplet();
-        int[] nums = new int[] {1, 2, 3, 4, 5};
-        System.out.println(it.increasingTriplet(nums));
+//        IncreasingTriplet it = new IncreasingTriplet();
+//        int[] nums = new int[] {1, 2, 3, 4, 5};
+//        System.out.println(it.increasingTriplet(nums));
+//
+//        nums = new int[] {5, 4, 3, 2, 1};
+//        System.out.println(it.increasingTriplet(nums));
 
-        nums = new int[] {5, 4, 3, 2, 1};
-        System.out.println(it.increasingTriplet(nums));
+        FirstUniqChar firstUniqChar = new FirstUniqChar();
+        //System.out.println(firstUniqChar.firstUniqChar("leetcode"));
+        System.out.println(firstUniqChar.firstUniqChar("loveleetcode"));
+        System.out.println(firstUniqChar.firstUniqChar("cc"));
     }
 }
