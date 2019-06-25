@@ -22,19 +22,19 @@ public class IncreasingTriplet {
     public boolean increasingTriplet(int[] nums) {
         if (nums == null || nums.length < 3) return false;
 
-        int lo = 0;
-        int hi = nums.length - 1;
-        while (lo < hi) {
-            if (nums[lo] >= nums[hi]) {
-                if (nums[lo + 1] <= nums[lo]) lo++;
-                else if (nums[hi - 1] >= nums[hi]) hi--;
-                else {
-                    if (nums[])
-                }
+        int one = Integer.MAX_VALUE;
+        int two = Integer.MAX_VALUE;
+
+        for (int n : nums) {
+            if (n <= one) {
+                one = n;
+            } else if (n <= two) {
+                two = n;
+            } else {
+                return true;
             }
         }
-        for (int i = 0; i < nums.length; i++) {
 
-        }
+        return false;
     }
 }
