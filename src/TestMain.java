@@ -2,8 +2,7 @@ import jdk.internal.org.objectweb.asm.tree.FieldInsnNode;
 import sun.reflect.generics.tree.Tree;
 import sun.security.provider.Sun;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class TestMain {
     public void run() {
@@ -599,13 +598,45 @@ public class TestMain {
 //        System.out.println(nd.numDecodings("10"));
 //        System.out.println(nd.numDecodings("101"));
 
-        Trie trie = new Trie();
-        trie.insert("apple");
-        System.out.println(trie.search("apple"));   // 返回 true
-        System.out.println(trie.search("app"));     // 返回 false
-        System.out.println(trie.startsWith("app")); // 返回 true
-        trie.insert("app");
-        System.out.println(trie.search("app"));     // 返回 true
+//        Trie trie = new Trie();
+//        trie.insert("apple");
+//        System.out.println(trie.search("apple"));   // 返回 true
+//        System.out.println(trie.search("app"));     // 返回 false
+//        System.out.println(trie.startsWith("app")); // 返回 true
+//        trie.insert("app");
+//        System.out.println(trie.search("app"));     // 返回 true
 
+        int[] nums = {1,2,3};
+        ShuffleArray sa = new ShuffleArray(nums);
+        int[] rst = sa.shuffle();
+        for (int i : rst) {
+            System.out.print(i + " ");
+        }
+        rst = sa.reset();
+        for (int i : rst) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println();
+        Random random = new Random();
+        for (int i = 0; i < 20; i++) {
+            System.out.print(random.nextInt()  + " ");
+        }
+
+        System.out.println();
+        for (int i = 0; i < 20; i++) {
+            System.out.print(Math.random() + " ");
+        }
+
+        Date date = new Date();
+        date.getTime();
+        System.out.println();
+        for (int i = 0; i < 20; i++) {
+            System.out.print(System.nanoTime()%20 + " ");
+        }
+
+        System.out.println();
+        System.out.println( -1 >> 1);
+        System.out.println( -1 >>> 1);
     }
 }
