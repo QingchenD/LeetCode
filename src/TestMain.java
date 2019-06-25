@@ -606,37 +606,70 @@ public class TestMain {
 //        trie.insert("app");
 //        System.out.println(trie.search("app"));     // 返回 true
 
-        int[] nums = {1,2,3};
-        ShuffleArray sa = new ShuffleArray(nums);
-        int[] rst = sa.shuffle();
-        for (int i : rst) {
-            System.out.print(i + " ");
-        }
-        rst = sa.reset();
-        for (int i : rst) {
-            System.out.print(i + " ");
-        }
+//        int[] nums = {1,2,3};
+//        ShuffleArray sa = new ShuffleArray(nums);
+//        int[] rst = sa.shuffle();
+//        for (int i : rst) {
+//            System.out.print(i + " ");
+//        }
+//        rst = sa.reset();
+//        for (int i : rst) {
+//            System.out.print(i + " ");
+//        }
+//
+//        System.out.println();
+//        Random random = new Random();
+//        for (int i = 0; i < 20; i++) {
+//            System.out.print(random.nextInt()  + " ");
+//        }
+//
+//        System.out.println();
+//        for (int i = 0; i < 20; i++) {
+//            System.out.print(Math.random() + " ");
+//        }
+//
+//        Date date = new Date();
+//        date.getTime();
+//        System.out.println();
+//        for (int i = 0; i < 20; i++) {
+//            System.out.print(System.nanoTime()%20 + " ");
+//        }
+//
+//        System.out.println();
+//        System.out.println( -1 >> 1);
+//        System.out.println( -1 >>> 1);
 
-        System.out.println();
-        Random random = new Random();
-        for (int i = 0; i < 20; i++) {
-            System.out.print(random.nextInt()  + " ");
-        }
+//        SolveNQueens solveNQueens = new SolveNQueens();
+//        List<List<String>> rst = solveNQueens.solveNQueens(4);
+//        for (List<String> list: rst) {
+//            for (String s: list) {
+//                System.out.println(s);
+//            }
+//            System.out.println("*********************");
+//        }
 
-        System.out.println();
-        for (int i = 0; i < 20; i++) {
-            System.out.print(Math.random() + " ");
-        }
+//        TotalNQueensII tnq = new TotalNQueensII();
+//        System.out.println(tnq.totalNQueens(4));
 
-        Date date = new Date();
-        date.getTime();
-        System.out.println();
-        for (int i = 0; i < 20; i++) {
-            System.out.print(System.nanoTime()%20 + " ");
-        }
 
-        System.out.println();
-        System.out.println( -1 >> 1);
-        System.out.println( -1 >>> 1);
+        OddEvenList  oddEvenList = new OddEvenList();
+        ListNode node1 = new ListNode(2);
+        ListNode node2 = new ListNode(1);
+        ListNode node3 = new ListNode(3);
+        ListNode node4 = new ListNode(5);
+        ListNode node5 = new ListNode(6);
+        ListNode node6 = new ListNode(4);
+        ListNode node7 = new ListNode(7);
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        node4.next = node5;
+        node5.next = node6;
+        node6.next = node7;
+        ListNode rst = oddEvenList.oddEvenList(node1);
+        while (rst != null) {
+            System.out.print(rst.val + " ");
+            rst = rst.next;
+        }
     }
 }
