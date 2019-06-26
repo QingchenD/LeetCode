@@ -1,3 +1,4 @@
+import com.sun.org.apache.bcel.internal.classfile.Code;
 import jdk.internal.org.objectweb.asm.tree.FieldInsnNode;
 import sun.reflect.generics.tree.Tree;
 import sun.security.provider.Sun;
@@ -606,37 +607,67 @@ public class TestMain {
 //        trie.insert("app");
 //        System.out.println(trie.search("app"));     // 返回 true
 
-        int[] nums = {1,2,3};
-        ShuffleArray sa = new ShuffleArray(nums);
-        int[] rst = sa.shuffle();
-        for (int i : rst) {
-            System.out.print(i + " ");
-        }
-        rst = sa.reset();
-        for (int i : rst) {
-            System.out.print(i + " ");
-        }
+//        int[] nums = {1,2,3};
+//        ShuffleArray sa = new ShuffleArray(nums);
+//        int[] rst = sa.shuffle();
+//        for (int i : rst) {
+//            System.out.print(i + " ");
+//        }
+//        rst = sa.reset();
+//        for (int i : rst) {
+//            System.out.print(i + " ");
+//        }
+//
+//        System.out.println();
+//        Random random = new Random();
+//        for (int i = 0; i < 20; i++) {
+//            System.out.print(random.nextInt()  + " ");
+//        }
+//
+//        System.out.println();
+//        for (int i = 0; i < 20; i++) {
+//            System.out.print(Math.random() + " ");
+//        }
+//
+//        Date date = new Date();
+//        date.getTime();
+//        System.out.println();
+//        for (int i = 0; i < 20; i++) {
+//            System.out.print(System.nanoTime()%20 + " ");
+//        }
+//
+//        System.out.println();
+//        System.out.println( -1 >> 1);
+//        System.out.println( -1 >>> 1);
 
-        System.out.println();
-        Random random = new Random();
-        for (int i = 0; i < 20; i++) {
-            System.out.print(random.nextInt()  + " ");
-        }
+//        Codec codec = new Codec();
+//        String s = "[1,2,3,null,null,4,5]";
+//        TreeNode root = codec.deserialize(s);
+//        System.out.println(codec.serialize(root));
+//
+//        s = "[1]";
+//        root = codec.deserialize(s);
+//        System.out.println(codec.serialize(root));
 
-        System.out.println();
-        for (int i = 0; i < 20; i++) {
-            System.out.print(Math.random() + " ");
-        }
+//        SingleNumberIII singleNumberIII = new SingleNumberIII();
+//        int[] nums =  {1,2,1,3,2,5};
+//        int[] rst = singleNumberIII.singleNumber(nums);
+//        for (int i : rst) {
+//            System.out.print(i + " ");
+//        }
 
-        Date date = new Date();
-        date.getTime();
-        System.out.println();
-        for (int i = 0; i < 20; i++) {
-            System.out.print(System.nanoTime()%20 + " ");
-        }
+        RangeBitwiseAnd rangeBitwiseAnd = new RangeBitwiseAnd();
+        System.out.println(rangeBitwiseAnd.rangeBitwiseAnd(5, 7));
+        System.out.println(rangeBitwiseAnd.rangeBitwiseAnd(0, Integer.MAX_VALUE));
+        System.out.println(rangeBitwiseAnd.rangeBitwiseAnd(1 << 30, Integer.MAX_VALUE));
+        long startms = System.currentTimeMillis();
+        int rst = rangeBitwiseAnd.rangeBitwiseAnd(700000000, 2147483641);
+        long endMs = System.currentTimeMillis();
+        System.out.println("rst:" + rst + " use:" + (endMs - startms));
 
-        System.out.println();
-        System.out.println( -1 >> 1);
-        System.out.println( -1 >>> 1);
+        System.out.println(rangeBitwiseAnd.rangeBitwiseAnd((1 << 30), (1 << 31) - 1));
+        System.out.println((Integer.MAX_VALUE << 4) & 0xff);
+
+        System.out.println( 5 & (Integer.MAX_VALUE << 2));
     }
 }
