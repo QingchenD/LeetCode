@@ -23,11 +23,8 @@ import java.util.List;
 public class Permute {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-
         addToList(nums, result);
-
         permute(nums, 0, nums.length - 1, result);
-
         return result;
     }
 
@@ -42,7 +39,7 @@ public class Permute {
         }
     }
 
-    void addToList(int[] nums , List<List<Integer>> result ) {
+    private void addToList(int[] nums , List<List<Integer>> result ) {
         List<Integer> list = new ArrayList<>();
         for ( Integer integer : nums) {
             list.add(integer);
@@ -50,7 +47,7 @@ public class Permute {
         result.add(list);
     }
 
-    void swap(int[] nums , int i, int j) {
+    private void swap(int[] nums , int i, int j) {
         int tmp = nums[i];
         nums[i] = nums[j];
         nums[j] = tmp;

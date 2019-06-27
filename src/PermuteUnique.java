@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -18,42 +19,41 @@ import java.util.List;
  */
 
 public class PermuteUnique {
+
+    /**
+     * 执行用时 :6 ms, 在所有 Java 提交中击败了68.62%的用户
+     * 内存消耗 :43.6 MB, 在所有 Java 提交中击败了65.71%的用户
+     *
+     * 算法：
+     *    关键是：回溯和剪枝的方法， 需要仔细斟酌思考回味。
+     *
+     */
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-
         Arrays.sort(nums);
-
-        addToList(nums, result);
-
-        permute(nums, 0, nums.length - 1, result);
-
+        boolean[] used = new boolean[nums.length];
+        permute(nums, result, new LinkedList<>(), used);
         return result;
     }
 
-    private void permute(int[] nums , int low, int high, List<List<Integer>> result) {
-        for (int i = low; i <= high; i++) {
-            for (int j = i + 1; j <= high; j++) {
-                if (nums[i] == nums[j]) continue;
-                if (i + 2 <= j && nums[j - 1] == nums[j]) continue;
-                swap(nums, i, j);
-                addToList(nums, result);
-                permute(nums, i + 1, high, result);
-                swap(nums, i, j);
-            }
+    private void permute(int[] nums, List<List<Integer>> result, LinkedList<Integer> list, boolean[] used) {
+        if (list.size() == nums.length) {
+            List<Integer> l = new ArrayList<>(list);
+            result.add(l);
+            return;
         }
-    }
 
-    void addToList(int[] nums , List<List<Integer>> result ) {
-        List<Integer> list = new ArrayList<>();
-        for ( Integer integer : nums) {
-            list.add(integer);
+        for (int i = 0; i < nums.length; i++) {
+            //剪枝的关键
+            if (used[i] || (i > 0 && !used[i - 1] && nums[i - 1] == nums[i])) continue;
+
+            list.add(nums[i]);
+            used[i] = true;
+            permute(nums, result, list, used);
+
+            //回溯的关键
+            used[i] = false;
+            list.removeLast();
         }
-        result.add(list);
-    }
-
-    void swap(int[] nums , int i, int j) {
-        int tmp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = tmp;
     }
 }

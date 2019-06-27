@@ -656,18 +656,63 @@ public class TestMain {
 //            System.out.print(i + " ");
 //        }
 
-        RangeBitwiseAnd rangeBitwiseAnd = new RangeBitwiseAnd();
-        System.out.println(rangeBitwiseAnd.rangeBitwiseAnd(5, 7));
-        System.out.println(rangeBitwiseAnd.rangeBitwiseAnd(0, Integer.MAX_VALUE));
-        System.out.println(rangeBitwiseAnd.rangeBitwiseAnd(1 << 30, Integer.MAX_VALUE));
-        long startms = System.currentTimeMillis();
-        int rst = rangeBitwiseAnd.rangeBitwiseAnd(700000000, 2147483641);
-        long endMs = System.currentTimeMillis();
-        System.out.println("rst:" + rst + " use:" + (endMs - startms));
+//        RangeBitwiseAnd rangeBitwiseAnd = new RangeBitwiseAnd();
+//        System.out.println(rangeBitwiseAnd.rangeBitwiseAnd(5, 7));
+//        System.out.println(rangeBitwiseAnd.rangeBitwiseAnd(0, Integer.MAX_VALUE));
+//        System.out.println(rangeBitwiseAnd.rangeBitwiseAnd(1 << 30, Integer.MAX_VALUE));
+//        long startms = System.currentTimeMillis();
+//        int rst = rangeBitwiseAnd.rangeBitwiseAnd(700000000, 2147483641);
+//        long endMs = System.currentTimeMillis();
+//        System.out.println("rst:" + rst + " use:" + (endMs - startms));
+//
+//        System.out.println(rangeBitwiseAnd.rangeBitwiseAnd((1 << 30), (1 << 31) - 1));
+//        System.out.println((Integer.MAX_VALUE << 4) & 0xff);
+//
+//        System.out.println( 5 & (Integer.MAX_VALUE << 2));
 
-        System.out.println(rangeBitwiseAnd.rangeBitwiseAnd((1 << 30), (1 << 31) - 1));
-        System.out.println((Integer.MAX_VALUE << 4) & 0xff);
+//        KthSmallestMatrix ksm = new KthSmallestMatrix();
+//        int[][] matrix = new int[][] {
+//                        {1,  5,  9},
+//                        {10, 11, 13},
+//                        {12, 13, 15}
+//                        };
+//
+//        System.out.println(ksm.kthSmallest(matrix, 8));
 
-        System.out.println( 5 & (Integer.MAX_VALUE << 2));
+//        GenerateParenthesis gp = new GenerateParenthesis();
+//        List<String> rst = gp.generateParenthesis(3);
+//        for (String s : rst) {
+//            System.out.println(s);
+//        }
+//        CombinationSum2 cs2 = new CombinationSum2();
+//        int[] candidates = {10,1,2,7,6,1,5};
+//        int target = 8;
+//        List<List<Integer>> rst = cs2.combinationSum2(candidates, target);
+//        for (List<Integer> list : rst) {
+//            for (Integer i : list) {
+//                System.out.print(i + " ");
+//            }
+//            System.out.println();
+//        }
+
+//        System.out.println("****************");
+//        candidates = new int[]{2,5,2,1,2};
+//        List<List<Integer>> rst = cs2.combinationSum2(candidates, 5);
+//        for (List<Integer> list : rst) {
+//            for (Integer i : list) {
+//                System.out.print(i + " ");
+//            }
+//            System.out.println();
+//        }
+
+        PermuteUnique permuteUnique = new PermuteUnique();
+        int[] nums = new int[] {1, 1, 2};
+        List<List<Integer>> rst = permuteUnique.permuteUnique(nums);
+        for (List<Integer> list : rst) {
+            for (Integer i : list) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+        }
     }
 }
