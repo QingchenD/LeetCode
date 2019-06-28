@@ -214,12 +214,12 @@ public class TestMain {
 //                {4,2,1}};
 //        System.out.println(mps.minPathSum(grid));
 
-//        WordBreak wb = new WordBreak();
-//        String s = "leetcode";
-//        List<String> words = new ArrayList<>();
-//        words.add("leet");
-//        words.add("code"); //, "code"]
-//        System.out.println(wb.wordBreak(s, words));
+        WordBreak wb = new WordBreak();
+        String s = "leetcode";
+        List<String> words = new ArrayList<>();
+        words.add("leet");
+        words.add("code"); //, "code"]
+        System.out.println(wb.wordBreak(s, words));
 
 //        String s = "catsandog";
 //        List<String> words = new ArrayList<>();
@@ -229,6 +229,18 @@ public class TestMain {
 //        words.add("and");
 //        words.add("cat");
 //        System.out.println(wb.wordBreak(s, words));
+//        String s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab";
+//
+//        String[] ws = new String[]{"a","aa","aaa","aaaa","aaaaa","aaaaaa",
+//        "aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"};
+//        ArrayList<String> words = new ArrayList<>();
+//        for (String str : ws) {
+//            words.add(str);
+//        }
+//        long startMs = System.currentTimeMillis();
+//        System.out.println(wb.wordBreak(s, words));
+//        long endMs = System.currentTimeMillis();
+//        System.out.println(" mordMatch need:" + (endMs - startMs) + " ms");
 
 //        MissingNumber mn = new MissingNumber();
 //        int[] nums = {9,6,4,2,3,5,7,0,1};
@@ -676,8 +688,17 @@ public class TestMain {
 //                        {10, 11, 13},
 //                        {12, 13, 15}
 //                        };
+
+        //System.out.println(ksm.kthSmallest(matrix, 8));
+
+//        matrix = new int[][] {
+//                {1,  5,  9, 110},
+//                {10, 11, 13, 170},
+//                {12, 13, 15, 220},
+//                {100, 200, 300, 400}
+//        };
 //
-//        System.out.println(ksm.kthSmallest(matrix, 8));
+//        System.out.println(ksm.kthSmallest(matrix, 11));
 
 //        GenerateParenthesis gp = new GenerateParenthesis();
 //        List<String> rst = gp.generateParenthesis(3);
@@ -705,14 +726,14 @@ public class TestMain {
 //            System.out.println();
 //        }
 
-        PermuteUnique permuteUnique = new PermuteUnique();
-        int[] nums = new int[] {1, 1, 2};
-        List<List<Integer>> rst = permuteUnique.permuteUnique(nums);
-        for (List<Integer> list : rst) {
-            for (Integer i : list) {
-                System.out.print(i + " ");
-            }
-            System.out.println();
-        }
+//        PermuteUnique permuteUnique = new PermuteUnique();
+//        int[] nums = new int[] {1, 1, 2};
+//        List<List<Integer>> rst = permuteUnique.permuteUnique(nums);
+//        for (List<Integer> list : rst) {
+//            for (Integer i : list) {
+//                System.out.print(i + " ");
+//            }
+//            System.out.println();
+//        }
     }
 }
