@@ -28,8 +28,16 @@ import java.util.*;
 
 public class LFUCache {
 
+    /**
+     * 执行用时 :176 ms, 在所有 Java 提交中击败了59.46%的用户
+     * 内存消耗 :63.2 MB, 在所有 Java 提交中击败了77.78%的用户
+     *
+     * 最好表现：
+     * 执行用时 :104 ms, 在所有 Java 提交中击败了95.50%的用户
+     * 内存消耗 :53 MB, 在所有 Java 提交中击败了97.22%的用户
+     */
     private HashMap<Integer, Node> map;
-    private HashMap<Integer, HashSet<Integer>> frequencyMap;
+    private HashMap<Integer, LinkedHashSet<Integer>> frequencyMap;
     private int capacity;
     private int size;
     private int minFrequency;
@@ -43,10 +51,8 @@ public class LFUCache {
 
     public int get(int key) {
         if (!map.containsKey(key)) return -1;
-
         Node node = map.get(key);
         reInsert(key, node);
-
         return node.value;
     }
 
@@ -68,19 +74,23 @@ public class LFUCache {
         }
     }
 
+//    private void insert1(int key, Node node) {
+//        LinkedHashSet<Integer> set = frequencyMap.get(node.frequency);
+//        if (set == null) {
+//            set = new LinkedHashSet<>();
+//            frequencyMap.put(node.frequency, set);
+//        }
+//        set.add(key);
+//        minFrequency = Math.min(node.frequency, minFrequency);
+//    }
+
     private void insert(int key, Node node) {
-        HashSet<Integer> set = frequencyMap.get(node.frequency);
-        if (set == null) {
-            set = new HashSet<>();
-            set.add(key);
-            frequencyMap.put(node.frequency, set);
-        }
         minFrequency = Math.min(node.frequency, minFrequency);
-        set.add(key);
+        frequencyMap.computeIfAbsent(node.frequency,k -> new LinkedHashSet<>()).add(key);
     }
 
     private void reInsert(int key, Node node) {
-        HashSet<Integer> set = frequencyMap.get(node.frequency);
+        LinkedHashSet<Integer> set = frequencyMap.get(node.frequency);
         if (set != null && set.size() > 0) {
             set.remove(key);
             if (minFrequency == node.frequency && set.size() == 0) {
@@ -93,19 +103,12 @@ public class LFUCache {
     }
 
     private void removeNode() {
-        HashSet<Integer> set = frequencyMap.get(minFrequency);
-        if (set != null) {
-            Iterator iterator = set.iterator();
-            Integer key = null;
-            if (iterator.hasNext()) {
-                key = (Integer) iterator.next();
-            }
-            if (key != null) {
-                set.remove(key);
-                map.remove(key);
-                size--;
-            }
-        }
+        LinkedHashSet<Integer> set = frequencyMap.get(minFrequency);
+        Iterator<Integer> iterator = set.iterator();
+        Integer key = iterator.next();
+        set.remove(key);
+        map.remove(key);
+        size--;
     }
 
     class Node {

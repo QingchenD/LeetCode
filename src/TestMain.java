@@ -788,16 +788,184 @@ public class TestMain {
 //        ["LFUCache","put","put","get","put","put","get"]
 //[[2],[2,1],[2,2],[2],[1,1],[4,1],[2]]
 
-        LFUCache cache = new LFUCache( 2 /* capacity (缓存容量) */ );
-        cache.put(2, 1);
-        cache.put(3, 2);
-        System.out.println(cache.get(3));
-        System.out.println(cache.get(2));
-        cache.put(4, 3);
-        System.out.println(cache.get(2));
-        System.out.println(cache.get(3));
-        System.out.println(cache.get(4));
+//        LFUCache cache = new LFUCache( 2 /* capacity (缓存容量) */ );
+//        cache.put(2, 1);
+//        cache.put(3, 2);
+//        System.out.println(cache.get(3));
+//        System.out.println(cache.get(2));
+//        cache.put(4, 3);
+//        System.out.println(cache.get(2));
+//        System.out.println(cache.get(3));
+//        System.out.println(cache.get(4));
 //        ["LFUCache","put","put","get","get","put","get","get","get"]
 //[[2],[2,1],[3,2],[3],[2],[4,3],[2],[3],[4]]
+
+//        TreeNode root = new TreeNode(7);
+//        TreeNode n1 = new TreeNode(3);
+//        TreeNode n2 = new TreeNode(15);
+//        TreeNode n3 = new TreeNode(9);
+//        TreeNode n4 = new TreeNode(20);
+//        root.left = n1; root.right = n2;
+//        n2.left = n3; n2.right = n4;
+//        BSTIterator iterator = new BSTIterator(root);
+//        System.out.println(iterator.next());    // 返回 3
+//        System.out.println(iterator.next());    // 返回 7
+//        System.out.println(iterator.hasNext()); // 返回 true
+//        System.out.println(iterator.next());    // 返回 9
+//        System.out.println(iterator.hasNext()); // 返回 true
+//        System.out.println(iterator.next());    // 返回 15
+//        System.out.println(iterator.hasNext()); // 返回 true
+//        System.out.println(iterator.next());    // 返回 20
+//        System.out.println(iterator.hasNext()); // 返回 false
+
+//        List<Integer> nums = new ArrayList<>() ;//{1, 2, 3};
+//        nums.add(1);
+//        nums.add(2);
+//        nums.add(3);
+//        PeekingIterator pi = new PeekingIterator(nums.iterator());
+//        System.out.println(pi.next());
+//        System.out.println(pi.peek());
+//        System.out.println(pi.next());
+//        System.out.println(pi.next());
+//        System.out.println(pi.hasNext());
+
+//        nums.add(1);
+//        nums.add(2);
+//        nums.add(3);
+//        nums.add(4);
+//
+//        PeekingIterator pi = new PeekingIterator(nums.iterator());
+//        System.out.println(pi.hasNext());
+//        System.out.println(pi.peek());
+//        System.out.println(pi.peek());
+//        System.out.println(pi.next());
+//        System.out.println(pi.next());
+//        System.out.println(pi.peek());
+//        System.out.println(pi.peek());
+//        System.out.println(pi.next());
+//        System.out.println(pi.hasNext());
+//        System.out.println(pi.peek());
+//        System.out.println(pi.hasNext());
+//        System.out.println(pi.next());
+//        System.out.println(pi.hasNext());
+
+//        Twitter twitter = new Twitter();
+//
+//        // 用户1发送了一条新推文 (用户id = 1, 推文id = 5).
+//        twitter.postTweet(1, 5);
+//        // 用户1的获取推文应当返回一个列表，其中包含一个id为5的推文.
+//        List<Integer> rst = twitter.getNewsFeed(1);
+//        System.out.println("User:" + 1 + " messages:");
+//        for (Integer i : rst) {
+//            System.out.print("" + i + " ");
+//        }
+//        System.out.println();
+//        // 用户1关注了用户2.
+//        twitter.follow(1, 2);
+//        // 用户2发送了一个新推文 (推文id = 6).
+//        twitter.postTweet(2, 6);
+//
+//        // 用户1的获取推文应当返回一个列表，其中包含两个推文，id分别为 -> [6, 5].
+//        // 推文id6应当在推文id5之前，因为它是在5之后发送的.
+//        rst = twitter.getNewsFeed(1);
+//        System.out.println("User:" + 1 + " messages:");
+//        for (Integer i : rst) {
+//            System.out.print("" + i + " ");
+//        }
+//        System.out.println();
+//
+//        // 用户1取消关注了用户2.
+//        twitter.unfollow(1, 2);
+//
+//        // 用户1的获取推文应当返回一个列表，其中包含一个id为5的推文.
+//        // 因为用户1已经不再关注用户2.
+//        rst = twitter.getNewsFeed(1);
+//        System.out.println("User:" + 1 + " messages:");
+//        for (Integer i : rst) {
+//            System.out.print("" + i + " ");
+//        }
+//        System.out.println();
+
+//        Twitter twitter = new Twitter();
+//
+//        // 用户1发送了一条新推文 (用户id = 1, 推文id = 5).
+//        twitter.postTweet(1, 1);
+//        // 用户1的获取推文应当返回一个列表，其中包含一个id为5的推文.
+//        List<Integer> rst = twitter.getNewsFeed(1);
+//        System.out.println("User:" + 1 + " messages:");
+//        for (Integer i : rst) {
+//            System.out.print("" + i + " ");
+//        }
+//        System.out.println();
+//        // 用户1关注了用户2.
+//        twitter.follow(2, 1);
+//        rst = twitter.getNewsFeed(2);
+//        System.out.println("User:" + 1 + " messages:");
+//        for (Integer i : rst) {
+//            System.out.print("" + i + " ");
+//        }
+//        System.out.println();
+//
+//        twitter.unfollow(2,1);
+//        rst = twitter.getNewsFeed(2);
+//        System.out.println("User:" + 1 + " messages:");
+//        for (Integer i : rst) {
+//            System.out.print("" + i + " ");
+//        }
+//        System.out.println();
+
+//        Twitter twitter = new Twitter();
+//        twitter.follow(1, 5);
+//        List<Integer> rst = twitter.getNewsFeed(1);
+//        System.out.println("User:" + 1 + " messages:");
+//        for (Integer i : rst) {
+//            System.out.print("" + i + " ");
+//        }
+//        System.out.println();
+
+//        Twitter twitter = new Twitter();
+//        twitter.postTweet(1, 5);
+//        twitter.follow(1, 1);
+//        List<Integer> rst = twitter.getNewsFeed(1);
+//        System.out.println("User:" + 1 + " messages:");
+//        for (Integer i : rst) {
+//            System.out.print("" + i + " ");
+//        }
+//        System.out.println();
+
+//        Twitter twitter = new Twitter();
+//        twitter.postTweet(1, 4);
+//        twitter.postTweet(2, 5);
+//        twitter.unfollow(1, 2);
+//        twitter.follow(1, 2);
+//        List<Integer> rst = twitter.getNewsFeed(1);
+//        System.out.println("User:" + 1 + " messages:");
+//        for (Integer i : rst) {
+//            System.out.print("" + i + " ");
+//        }
+//        System.out.println();
+
+
+        // 初始化一个空的集合。
+        RandomizedCollection collection = new RandomizedCollection();
+
+        // 向集合中插入 1 。返回 true 表示集合不包含 1 。
+        collection.insert(1);
+
+        // 向集合中插入另一个 1 。返回 false 表示集合包含 1 。集合现在包含 [1,1] 。
+        collection.insert(1);
+
+        // 向集合中插入 2 ，返回 true 。集合现在包含 [1,1,2] 。
+        collection.insert(2);
+
+        // getRandom 应当有 2/3 的概率返回 1 ，1/3 的概率返回 2 。
+        System.out.println(collection.getRandom());
+
+        // 从集合中删除 1 ，返回 true 。集合现在包含 [1,2] 。
+        System.out.println(collection.remove(1));
+
+        // getRandom 应有相同概率返回 1 和 2 。
+        System.out.println(collection.getRandom());
+
     }
 }
