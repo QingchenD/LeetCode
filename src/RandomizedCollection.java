@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Random;
 
 /**
@@ -15,10 +16,55 @@ import java.util.Random;
 
 public class RandomizedCollection {
 
+//    private ArrayList<Integer> list;
+//    private HashMap<Integer, Integer> countMap;
+//    private Random random;
+//    /** Initialize your data structure here. */
+//    public RandomizedCollection() {
+//        this.list = new ArrayList<>();
+//        this.countMap = new HashMap<>();
+//        this.random = new Random();
+//    }
+//
+//    /** Inserts a value to the collection. Returns true if the collection did not already contain the specified element. */
+//    public boolean insert(int val) {
+//        list.add(val);
+//        if (!countMap.containsKey(val)) {
+//            countMap.put(val, 1);
+//        } else {
+//            countMap.put(val, countMap.get(val) + 1);
+//        }
+//
+//        return true;
+//    }
+//
+//    /** Removes a value from the collection. Returns true if the collection contained the specified element. */
+//    public boolean remove(int val) {
+//        if (!countMap.containsKey(val)) return false;
+//
+//        int count = countMap.get(val);
+//        if (count == 1) {
+//            countMap.remove(val);
+//        } else {
+//            countMap.put(val, count - 1);
+//        }
+//        list.remove(Integer.valueOf(val));
+//
+//        return true;
+//    }
+//
+//    /** Get a random element from the collection. */
+//    public int getRandom() {
+//        return list.get(random.nextInt(list.size()));
+//    }
+
+
+
     /**
      * 执行用时 :137 ms, 在所有 Java 提交中击败了35.07%的用户
      * 内存消耗 :39.4 MB, 在所有 Java 提交中击败了100.00%的用户
      */
+
     private ArrayList<Integer> list;
     private Random random;
     /** Initialize your data structure here. */
@@ -39,7 +85,6 @@ public class RandomizedCollection {
 
     /** Get a random element from the collection. */
     public int getRandom() {
-        int index = random.nextInt(list.size());
-        return list.get(index);
+        return list.get(random.nextInt(list.size()));
     }
 }
