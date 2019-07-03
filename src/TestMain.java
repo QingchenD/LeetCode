@@ -962,33 +962,46 @@ public class TestMain {
 //        System.out.println(collection.getRandom());
 //
 //         初始化一个空的集合。
-        RandomizedCollection collection = new RandomizedCollection();
-        collection.insert(1);
-        collection.insert(1);
-        collection.insert(2);
-        collection.insert(2);
-        collection.insert(2);
-        collection.remove(1);
-        collection.remove(1);
-        collection.remove(2);
-        collection.insert(1);
-        collection.remove(2);
-        System.out.println(collection.getRandom());
-        System.out.println(collection.getRandom());
-        System.out.println(collection.getRandom());
-        System.out.println(collection.getRandom());
-        System.out.println(collection.getRandom());
-        System.out.println(collection.getRandom());
-        System.out.println(collection.getRandom());
-        System.out.println(collection.getRandom());
-        System.out.println(collection.getRandom());
-        System.out.println(collection.getRandom());
+//        RandomizedCollection collection = new RandomizedCollection();
+//        collection.insert(1);
+//        collection.insert(1);
+//        collection.insert(2);
+//        collection.insert(2);
+//        collection.insert(2);
+//        collection.remove(1);
+//        collection.remove(1);
+//        collection.remove(2);
+//        collection.insert(1);
+//        collection.remove(2);
+//        System.out.println(collection.getRandom());
+//        System.out.println(collection.getRandom());
+//        System.out.println(collection.getRandom());
+//        System.out.println(collection.getRandom());
+//        System.out.println(collection.getRandom());
+//        System.out.println(collection.getRandom());
+//        System.out.println(collection.getRandom());
+//        System.out.println(collection.getRandom());
+//        System.out.println(collection.getRandom());
+//        System.out.println(collection.getRandom());
 
 //        RandomizedCollection collection = new RandomizedCollection();
 //        collection.insert(1);
 //        collection.remove(1);
 //        collection.insert(2);
 
+//        CountDigitOne cdo = new CountDigitOne();
+//        System.out.println(cdo.countDigitOne(13));
 
+//        BasicCalculate bc = new BasicCalculate();
+//        System.out.println(bc.calculate("(1+(4+5+2)-3)+(6+8)"));
+//        System.out.println(bc.calculate( "1 + 1"));
+//        System.out.println(bc.calculate(" 2-1 + 2 "));
+//        System.out.println(bc.calculate(" 21 + 2 "));
+
+        BulbSwitch bs = new BulbSwitch();
+        long startms = System.currentTimeMillis();
+        int rst = bs.bulbSwitch(10000000); //99999);
+        long endms = System.currentTimeMillis();
+        System.out.println(" rst : " + rst + " time:" + (endms - startms));
     }
 }
