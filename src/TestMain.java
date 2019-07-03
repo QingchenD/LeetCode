@@ -991,6 +991,7 @@ public class TestMain {
 
 //        CountDigitOne cdo = new CountDigitOne();
 //        System.out.println(cdo.countDigitOne(13));
+//        System.out.println(cdo.countDigitOne(1));
 
 //        BasicCalculate bc = new BasicCalculate();
 //        System.out.println(bc.calculate("(1+(4+5+2)-3)+(6+8)"));
@@ -998,10 +999,18 @@ public class TestMain {
 //        System.out.println(bc.calculate(" 2-1 + 2 "));
 //        System.out.println(bc.calculate(" 21 + 2 "));
 
-        BulbSwitch bs = new BulbSwitch();
-        long startms = System.currentTimeMillis();
-        int rst = bs.bulbSwitch(10000000); //99999);
-        long endms = System.currentTimeMillis();
-        System.out.println(" rst : " + rst + " time:" + (endms - startms));
+//        BulbSwitch bs = new BulbSwitch();
+//        long startms = System.currentTimeMillis();
+//        int rst = bs.bulbSwitch(10000000); //99999);
+//        long endms = System.currentTimeMillis();
+//        System.out.println(" rst : " + rst + " time:" + (endms - startms));
+
+        SubstringMaxLongNodupicate smnd = new SubstringMaxLongNodupicate();
+        System.out.println(smnd.lengthOfLongestSubstring( "abcabcbb"));
+        System.out.println(smnd.lengthOfLongestSubstring( "bbbbb"));
+        System.out.println(smnd.lengthOfLongestSubstring("pwwkew"));
+        System.out.println(smnd.lengthOfLongestSubstring(" "));
+        System.out.println(smnd.lengthOfLongestSubstring("a"));
+        System.out.println(smnd.lengthOfLongestSubstring("an"));
     }
 }
