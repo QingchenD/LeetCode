@@ -1005,12 +1005,43 @@ public class TestMain {
 //        long endms = System.currentTimeMillis();
 //        System.out.println(" rst : " + rst + " time:" + (endms - startms));
 
-        SubstringMaxLongNodupicate smnd = new SubstringMaxLongNodupicate();
-        System.out.println(smnd.lengthOfLongestSubstring( "abcabcbb"));
-        System.out.println(smnd.lengthOfLongestSubstring( "bbbbb"));
-        System.out.println(smnd.lengthOfLongestSubstring("pwwkew"));
-        System.out.println(smnd.lengthOfLongestSubstring(" "));
-        System.out.println(smnd.lengthOfLongestSubstring("a"));
-        System.out.println(smnd.lengthOfLongestSubstring("an"));
+//        SubstringMaxLongNodupicate smnd = new SubstringMaxLongNodupicate();
+//        System.out.println(smnd.lengthOfLongestSubstring( "abcabcbb"));
+//        System.out.println(smnd.lengthOfLongestSubstring( "bbbbb"));
+//        System.out.println(smnd.lengthOfLongestSubstring("pwwkew"));
+//        System.out.println(smnd.lengthOfLongestSubstring(" "));
+//        System.out.println(smnd.lengthOfLongestSubstring("a"));
+//        System.out.println(smnd.lengthOfLongestSubstring("an"));
+
+//        IntegerBreak ib = new IntegerBreak();
+//        System.out.println(ib.integerBreak(5));
+//        System.out.println(ib.integerBreak(10));
+//        System.out.println(ib.integerBreak(2));
+//        System.out.println(ib.integerBreak(4));
+
+//        MaxRotateFunction mrf = new MaxRotateFunction();
+//        int[] nums = {4, 3, 2, 6};
+//        System.out.println(mrf.maxRotateFunction(nums));
+
+//        FindNthDigit fnd = new FindNthDigit();
+//        System.out.println(fnd.findNthDigit(1));
+//        System.out.println(fnd.findNthDigit(11));
+//        System.out.println(fnd.findNthDigit(12));
+//        System.out.println(fnd.findNthDigit(13));
+//        System.out.println(fnd.findNthDigit(14));
+//        System.out.println(fnd.findNthDigit(15));
+//        System.out.println(fnd.findNthDigit(189));
+//        System.out.println(fnd.findNthDigit(190));
+//        System.out.println(fnd.findNthDigit(191));
+//        System.out.println(fnd.findNthDigit(192));
+//        System.out.println(fnd.findNthDigit(999999999));
+
+//        PoorPigs pps = new PoorPigs();
+//        System.out.println(pps.poorPigs(1000, 15, 60));
+
+        NthUglyNumber nn = new NthUglyNumber();
+        System.out.println(nn.nthUglyNumber(1));
+        System.out.println(nn.nthUglyNumber(2));
+        System.out.println(nn.nthUglyNumber(10));
     }
 }
