@@ -1039,9 +1039,21 @@ public class TestMain {
 //        PoorPigs pps = new PoorPigs();
 //        System.out.println(pps.poorPigs(1000, 15, 60));
 
-        NthUglyNumber nn = new NthUglyNumber();
-        System.out.println(nn.nthUglyNumber(1));
-        System.out.println(nn.nthUglyNumber(2));
-        System.out.println(nn.nthUglyNumber(10));
+//        NthUglyNumber nn = new NthUglyNumber();
+//        System.out.println(nn.nthUglyNumber(1));
+//        System.out.println(nn.nthUglyNumber(2));
+//        System.out.println(nn.nthUglyNumber(10));
+
+        DistributeCandies dc = new DistributeCandies();
+        int[] rst = dc.distributeCandies(10, 3);
+        for (int i : rst) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println();
+        rst = dc.distributeCandies(7, 4);
+        for (int i : rst) {
+            System.out.print(i + " ");
+        }
     }
 }
