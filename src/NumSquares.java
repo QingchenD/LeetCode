@@ -17,6 +17,25 @@ import java.util.*;
  */
 
 public class NumSquares {
+
+//    public int numSquares(int n) {
+//        int sqrt = (int)Math.sqrt(n);
+//        int minCount = 4;
+//        for (int i = sqrt; i >= 1; i++) {
+//            if (sqrt * sqrt * 4 < n) break;
+//            int num = n;
+//            for (int j = i; j >= 1; j++) {
+//                if ()
+//            }
+//        }
+//    }
+
+
+
+    /**
+     * 84ms 超过21.75%的用户
+     */
+    /*
     public int numSquares(int n) {
         Queue<Integer> queue = new LinkedList<>();
         Set<Integer> set = new HashSet<>();
@@ -41,23 +60,46 @@ public class NumSquares {
         }
         return 0;
     }
+    */
 
 
-    /** 递归实现 速度 很慢 会超时 **/
-    private int subSquares(int n, int maxSqrt, int step, int minLength) {
+    /**
+     * 算法：
+     *    四平方定理：一个正整数，可以表示为四个平方数的和。
+     *
+     *  本代码只是简单的利用利用了边界4来做剪枝。
+     *  优点：易于理解。
+     *  缺点：代码没有达到最高效。
+     *
+     *  更高效的实现是利用四平方定理的性质去实现算法。
+     *  优点：高效
+     *  缺点：需要很熟悉定理性质，才能理解代码。
+     *
+     * 执行用时 :10 ms, 在所有 Java 提交中击败了93.90%的用户
+     * 内存消耗 :33.9 MB, 在所有 Java 提交中击败了87.01%的用户
+     *
+     */
+    public int numSquares(int n) {
+        return  subSquares(n, (int)Math.sqrt(n), 0);
+    }
+
+    private int subSquares(int n, int maxSqrt, int step) {
         if (n == 0) return 0;
         if (n == 1) return 1;
-        if (step > 4 || step > minLength) return step;
-        int length = n;
+        if (maxSqrt * maxSqrt * (4 - step) < n) return 4;
+        if (step > 4) return step;
 
-        while (Math.pow(maxSqrt,2) > n) {
+        while (maxSqrt * maxSqrt > n) {
             maxSqrt--;
         }
 
+        int length = n;
         for (int i = maxSqrt ; i >= 1; i--) {
-            length = Math.min(length, 1 + subSquares((int)(n - Math.pow(maxSqrt, 2)), i,step + 1, length));
+            if (i * i * (4 - step) < n) break;
+            length = Math.min(length, 1 + subSquares(n - (i * i), i,step + 1));
         }
 
         return length;
     }
+
 }
