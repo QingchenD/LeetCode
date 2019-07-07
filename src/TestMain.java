@@ -1092,9 +1092,18 @@ public class TestMain {
 //        System.out.println("rst:" + rst + " time:" + (endMs - startMs));
 
 
-        RemoveDuplicateLetters rd = new RemoveDuplicateLetters();
-        System.out.println(rd.removeDuplicateLetters("bcabc"));
-        System.out.println(rd.removeDuplicateLetters("cbacdcbc"));
-        System.out.println(rd.removeDuplicateLetters("abacb"));
+//        RemoveDuplicateLetters rd = new RemoveDuplicateLetters();
+//        System.out.println(rd.removeDuplicateLetters("bcabc"));
+//        System.out.println(rd.removeDuplicateLetters("cbacdcbc"));
+//        System.out.println(rd.removeDuplicateLetters("abacb"));
+
+//        System.out.println((0xC ^ (0xC - 1)) & 0xC);
+
+        MaxSlidingWindow msw = new MaxSlidingWindow();
+        int[] nums = {1,3,-1,-3,5,3,6,7};
+        int[] rst = msw.maxSlidingWindow(nums, 3);
+        for (int i : rst) {
+            System.out.print(i + " ");
+        }
     }
 }
