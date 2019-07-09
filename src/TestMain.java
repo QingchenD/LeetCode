@@ -1,9 +1,4 @@
-import com.sun.org.apache.bcel.internal.classfile.Code;
-import jdk.internal.org.objectweb.asm.tree.FieldInsnNode;
-import sun.reflect.generics.tree.Tree;
-import sun.security.provider.Sun;
-
-import java.util.*;
+import ljava.NumArray;
 
 public class TestMain {
     public void run() {
@@ -1158,14 +1153,20 @@ public class TestMain {
 //        System.out.println();
 //        System.out.println("Time : " + (endMs - startMs));
 
-        // 类型声明
-        int c = 10;
-        MathOperation addition = (int a, int b) -> {return  a + b;};
-        System.out.println(addition.operation(1,2));
+//         类型声明
+//        int c = 10;
+//        MathOperation addition = (int a, int b) -> {return  a + b;};
+//        System.out.println(addition.operation(1,2));
+//
+//         不用类型声明
+//        MathOperation subtraction = (a, b) -> a - b;
+//        System.out.println(subtraction.operation(1,2));
 
-        // 不用类型声明
-        MathOperation subtraction = (a, b) -> a - b;
-        System.out.println(subtraction.operation(1,2));
+        int[] nums = {-2, 0, 3, -5, 2, -1};
+        NumArray na = new NumArray(nums);
+        System.out.println(na.sumRange(0, 2));
+        System.out.println(na.sumRange(2, 5));
+        System.out.println(na.sumRange(0, 5));
     }
 
     interface MathOperation {
