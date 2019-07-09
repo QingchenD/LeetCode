@@ -1,4 +1,5 @@
 import ljava.ConstructRectangle;
+import ljava.DiceDotCount;
 import mykotlin.FindRadius;
 import mykotlin.NextGreaterElement;
 import ljava.NumArray;
@@ -1223,9 +1224,18 @@ public class TestMain {
 //        heats = new int[] {1 ,2, 3, 4};
 //        System.out.println(findRadius.findRadius(house, heats));
 
-        short a = 1 << 2;
-        short b = 1;
-        short c = (short)(a + b);
+//        short a = 1 << 2;
+//        short b = 1;
+//        short c = (short)(a + b);
+		
+//		DiceDotCount ddc = new DiceDotCount();
+//        long startMs = System.currentTimeMillis();
+//        int[] rst = ddc.diceDotCount(2);
+//        long endMs = System.currentTimeMillis();
+//        for (int i = 0; i < rst.length; i++) {
+//            System.out.println(i + " : " + rst[i]);
+//        }
+//        System.out.println("time:" + (endMs - startMs));
     }
 
     interface MathOperation {
