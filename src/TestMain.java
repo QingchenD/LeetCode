@@ -1,10 +1,6 @@
-import ljava.ConstructRectangle;
-import ljava.DiceDotCount;
-import mykotlin.FindRadius;
-import mykotlin.NextGreaterElement;
-import ljava.NumArray;
-import ljava.SymmetricTree;
-import mykotlin.Ransom;
+//import ljava.PredictTheWinner;
+import ljava.NumMovesStonesII;
+import mykotlin.PredictTheWinner;
 
 public class TestMain {
     public void run() {
@@ -1236,6 +1232,39 @@ public class TestMain {
 //            System.out.println(i + " : " + rst[i]);
 //        }
 //        System.out.println("time:" + (endMs - startMs));
+
+//        System.out.println(EnumTest.First);
+
+//        LicenseKeyFormatting lkf = new LicenseKeyFormatting();
+//        String string = "5F3Z-2e-9-w";
+//        System.out.println(lkf.licenseKeyFormatting(string, 4));
+//
+//        string = "2-5g-3-J";
+//        System.out.println(lkf.licenseKeyFormatting(string, 2));
+//
+//        string = "---";
+//        System.out.println(lkf.licenseKeyFormatting(string, 3));
+
+//        PredictTheWinner ptw = new PredictTheWinner();
+//        int[] nums =  {1, 5, 2};
+//        System.out.println(ptw.predictTheWinner(nums));
+//
+//        nums = new int[] {1, 5, 233, 7};
+//        System.out.println(ptw.predictTheWinner(nums));
+
+        NumMovesStonesII nms = new NumMovesStonesII();
+        int[] stones = {7,4,9};
+        int[] rst = nms.numMovesStonesII(stones);
+        for (int i : rst) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        stones = new int[] {6,5,4,3,10};
+        rst = nms.numMovesStonesII(stones);
+        for (int i : rst) {
+            System.out.print(i + " ");
+        }
     }
 
     interface MathOperation {
