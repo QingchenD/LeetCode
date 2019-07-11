@@ -1,4 +1,7 @@
 //import ljava.PredictTheWinner;
+import ljava.ZumaGame;
+import mykotlin.Find132pattern;
+import ljava.MinMoves;
 import ljava.NumMovesStonesII;
 import mykotlin.PredictTheWinner;
 
@@ -1252,19 +1255,66 @@ public class TestMain {
 //        nums = new int[] {1, 5, 233, 7};
 //        System.out.println(ptw.predictTheWinner(nums));
 
-        NumMovesStonesII nms = new NumMovesStonesII();
-        int[] stones = {7,4,9};
-        int[] rst = nms.numMovesStonesII(stones);
-        for (int i : rst) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+//        NumMovesStonesII nms = new NumMovesStonesII();
+//        int[] stones = {7,4,9};
+//        int[] rst = nms.numMovesStonesII(stones);
+//        for (int i : rst) {
+//            System.out.print(i + " ");
+//        }
+//        System.out.println();
+//
+//        stones = new int[] {6,5,4,3,10};
+//        rst = nms.numMovesStonesII(stones);
+//        for (int i : rst) {
+//            System.out.print(i + " ");
+//        }
 
-        stones = new int[] {6,5,4,3,10};
-        rst = nms.numMovesStonesII(stones);
-        for (int i : rst) {
-            System.out.print(i + " ");
-        }
+//        MinMoves mm = new MinMoves();
+//        int[] nums = {1,2,3};
+//        System.out.println(mm.minMoves(nums));
+//
+//        nums = new int[] {1,2,3,4};
+//        System.out.println(mm.minMoves(nums));
+
+//        nums = new int[] {-100,0,100};
+//        System.out.println(mm.minMoves(nums));
+//
+//        nums = new int[] {1, 1, 2147483647};
+//        System.out.println(mm.minMoves(nums));
+//
+//        nums = new int[] {1, 2147483647};
+//        long startMs = System.currentTimeMillis();
+//        int rst = mm.minMoves(nums);
+//        long endMs = System.currentTimeMillis();
+//        System.out.println("rst:" + rst + " time:" + (endMs - startMs));
+
+
+//        Find132pattern fp = new Find132pattern();
+//        int[] nums = {1, 2, 3, 4};
+//        System.out.println(fp.find132pattern(nums));
+//
+//        nums = new int[] {3, 1, 4, 2};
+//        System.out.println(fp.find132pattern(nums));
+//
+//        nums = new int[] {-1, 3, 2, 0};
+//        System.out.println(fp.find132pattern(nums));
+//
+//        nums = new int[] {1,0,1,-4,-3};
+//        System.out.println(fp.find132pattern(nums));
+//
+//        nums = new int[] {-2, 1, 1};
+//        System.out.println(fp.find132pattern(nums));
+//
+//        nums = new int[] {-2,1,2,-2,1,2};
+//        System.out.println(fp.find132pattern(nums));
+
+
+        ZumaGame zumaGame = new ZumaGame();
+        //System.out.println(zumaGame.findMinStep("WRRBBW", "RB" ));
+        //System.out.println(zumaGame.findMinStep("WWRRBBWW", "WRBRW" ));
+        System.out.println(zumaGame.findMinStep("WWGWGW", "GWBWR" ));
+
+
     }
 
     interface MathOperation {
