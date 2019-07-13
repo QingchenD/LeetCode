@@ -1,9 +1,11 @@
 //import ljava.PredictTheWinner;
-import ljava.ZumaGame;
+//import ljava.*;
 import mykotlin.Find132pattern;
-import ljava.MinMoves;
-import ljava.NumMovesStonesII;
 import mykotlin.PredictTheWinner;
+import mykotlin.PyramidTransition;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class TestMain {
     public void run() {
@@ -1309,12 +1311,32 @@ public class TestMain {
 //        System.out.println(fp.find132pattern(nums));
 
 
-        ZumaGame zumaGame = new ZumaGame();
-        //System.out.println(zumaGame.findMinStep("WRRBBW", "RB" ));
-        //System.out.println(zumaGame.findMinStep("WWRRBBWW", "WRBRW" ));
-        System.out.println(zumaGame.findMinStep("WWGWGW", "GWBWR" ));
+//        ZumaGame zumaGame = new ZumaGame();
+//        System.out.println(zumaGame.findMinStep("WRRBBW", "RB" ));
+//        System.out.println(zumaGame.findMinStep("WWRRBBWW", "WRBRW" ));
+//        System.out.println(zumaGame.findMinStep("WWGWGW", "GWBWR" ));
 
+//        RecoverTree recoverTree = new RecoverTree();
+//        TreeNode n1 = new TreeNode(1);
+//        TreeNode n2 = new TreeNode(3);
+//        TreeNode n3 = new TreeNode(2);
+//        n1.left = n2;
+//        n2.right = n3;
+//        recoverTree.recoverTree(n1);
 
+        PyramidTransition pyramidTransition = new PyramidTransition();
+        String bottom = "XYZ";
+        String[] allowed = {"XYD", "YZE", "DEA", "FFF"};
+        List<String> allow = Arrays.asList(allowed);
+//        System.out.println(pyramidTransition.pyramidTransition(bottom, allow));
+//
+//        bottom = "XXYX";
+//        allow = Arrays.asList(new String[]{"XXX", "XXY", "XYX", "XYY", "YXZ"});
+//        System.out.println(pyramidTransition.pyramidTransition(bottom, allow));
+
+        bottom = "CBDDA";
+        allow = Arrays.asList(new String[] {"ACC","ACA","AAB","BCA","BCB","BAC","BAA","CAC","BDA","CAA","CCA","CCC","CCB","DAD","CCD","DAB","ACD","DCA","CAD","CBB","ABB","ABC","ABD","BDB","BBC","BBA","DDA","CDD","CBC","CBA","CDA","DBA","ABA"});
+        System.out.println(pyramidTransition.pyramidTransition(bottom, allow));
     }
 
     interface MathOperation {
